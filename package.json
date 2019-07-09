@@ -1,0 +1,27 @@
+{
+  "name": "hapi-p1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "good": "^8.1.2",
+    "hapi": "^18.1.0",
+    "hapi-pino": "^6.0.1",
+    "hapi-swagger": "^10.0.2",
+    "inert": "^5.1.3",
+    "joi": "^14.3.1",
+    "mysql2": "^1.6.5",
+    "package": "^1.0.1",
+    "sequelize": "^5.8.7",
+    "vision": "^5.4.4"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.4.0"
+  }
+}
