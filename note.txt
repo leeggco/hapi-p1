@@ -1,0 +1,3 @@
+sequelize init
+需要进入 node_modules/.bin 目录
+再执行 .\sequelize init
