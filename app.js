@@ -1,11 +1,13 @@
 'use strict';
 
-const Hapi = require('hapi');
 require('env2')('./.env');
+const Hapi = require('hapi');
 const config = require('./config');
 const routesHelloHapi = require('./routes/hello-hapi');
 const routesShops = require('./routes/shops');
 const routesOrders = require('./routes/orders');
+// 注册分页插件
+const pluginHapiPagination = require('./plugins/hapi-pagination');
 // 引入自定义的 hapi-swagger 插件配置
 const pluginHapiSwagger = require('./plugins/hapi-swagger');
 const init = async () => {
@@ -27,6 +29,9 @@ const init = async () => {
     // 为系统使用 hapi-swagger
     ...pluginHapiSwagger
   ]);
+  // await server.register([
+  //   pluginHapiPagination,
+  // ])
   // 普通GET请求
   server.route([
     ...routesHelloHapi,
