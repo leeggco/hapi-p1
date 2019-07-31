@@ -3,12 +3,14 @@ const {
   paginationDefine
 } = require('../utils/router-helper');
 const GROUP_NAME = 'shops';
+console.log(111111)
 // 引入 models
 const models = require("../models");
 module.exports = [{
   method: 'GET',
   path: `/${GROUP_NAME}`,
   handler: async (request, reply) => {
+    console.log(22222)
     const { rows: results, count: totalCount } = await models.shops.findAndCountAll({
       attributes: [
         'id',
@@ -17,6 +19,7 @@ module.exports = [{
       limit: request.query.limit,
       offset: (request.query.page - 1) * request.query.limit,
     });
+    console.log(33333, results)
     // 开启分页的插件，返回的数据结构里，需要带上 result 与 totalCount 两个字段
     reply({ results, totalCount });
   },
