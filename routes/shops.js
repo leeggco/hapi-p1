@@ -19,9 +19,12 @@ module.exports = [{
       limit: request.query.limit,
       offset: (request.query.page - 1) * request.query.limit,
     });
-    console.log(33333, results)
+    console.log(33333, reply)
     // 开启分页的插件，返回的数据结构里，需要带上 result 与 totalCount 两个字段
-    reply({ results, totalCount });
+    return {
+      results,
+      totalCount
+    }
   },
   config: {
     tags: ['api', GROUP_NAME],

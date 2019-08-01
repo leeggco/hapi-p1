@@ -9,9 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "env2": "^2.2.2",
     "good": "^8.1.2",
     "hapi": "^18.1.0",
+    "hapi-auth-jwt2": "^8.6.1",
     "hapi-pagination": "^1.22.0",
     "hapi-pino": "^6.0.1",
     "hapi-swagger": "^10.0.2",

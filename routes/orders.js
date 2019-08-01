@@ -5,7 +5,7 @@ module.exports = [{
     method: 'POST',
     path: `/${GROUP_NAME}`,
     handler: async (request, reply) => {
-      reply();
+      return {}
     },
     config: {
       tags: ['api', GROUP_NAME],
@@ -29,7 +29,7 @@ module.exports = [{
     method: 'POST',
     path: `/${GROUP_NAME}/{orderId}/pay`,
     handler: async (request, reply) => {
-      reply();
+      return {}
     },
     config: {
       tags: ['api', GROUP_NAME],
